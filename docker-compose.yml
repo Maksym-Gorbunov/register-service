@@ -1,0 +1,11 @@
+register-service:
+  image:  maksymiths/eureka-server
+  hostname: register-service
+  ports:
+    - "8761:8761"
+
+
+temp001:
+  image:  maksymiths/temp001
+  links:
+    - "register-service"
